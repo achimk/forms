@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		273C849E25AB5C5A00373A85 /* Forms.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 273C849425AB5C5A00373A85 /* Forms.framework */; };
 		273C84A325AB5C5A00373A85 /* FormsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273C84A225AB5C5A00373A85 /* FormsTests.swift */; };
 		273C84A525AB5C5A00373A85 /* Forms.h in Headers */ = {isa = PBXBuildFile; fileRef = 273C849725AB5C5A00373A85 /* Forms.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		276B021625AB614800D67A7D /* Elements in Frameworks */ = {isa = PBXBuildFile; productRef = 276B021525AB614800D67A7D /* Elements */; };
+		276B022425AB631C00D67A7D /* TableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276B022325AB631C00D67A7D /* TableViewCells.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 		273C849D25AB5C5A00373A85 /* FormsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		273C84A225AB5C5A00373A85 /* FormsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormsTests.swift; sourceTree = "<group>"; };
 		273C84A425AB5C5A00373A85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		276B022325AB631C00D67A7D /* TableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCells.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276B021625AB614800D67A7D /* Elements in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +75,7 @@
 		273C849625AB5C5A00373A85 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				276B022225AB62FC00D67A7D /* Cells */,
 				273C849725AB5C5A00373A85 /* Forms.h */,
 				273C849825AB5C5A00373A85 /* Info.plist */,
 			);
@@ -84,6 +89,14 @@
 				273C84A425AB5C5A00373A85 /* Info.plist */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		276B022225AB62FC00D67A7D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				276B022325AB631C00D67A7D /* TableViewCells.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,6 +127,9 @@
 			dependencies = (
 			);
 			name = Forms;
+			packageProductDependencies = (
+				276B021525AB614800D67A7D /* Elements */,
+			);
 			productName = Forms;
 			productReference = 273C849425AB5C5A00373A85 /* Forms.framework */;
 			productType = "com.apple.product-type.framework";
@@ -147,6 +163,7 @@
 				TargetAttributes = {
 					273C849325AB5C5A00373A85 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					273C849C25AB5C5A00373A85 = {
 						CreatedOnToolsVersion = 12.3;
@@ -162,6 +179,9 @@
 				Base,
 			);
 			mainGroup = 273C848A25AB5C5A00373A85;
+			packageReferences = (
+				276B021425AB614800D67A7D /* XCRemoteSwiftPackageReference "elements" */,
+			);
 			productRefGroup = 273C849525AB5C5A00373A85 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				276B022425AB631C00D67A7D /* TableViewCells.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +362,7 @@
 		273C84A925AB5C5A00373A85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -357,6 +379,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +388,7 @@
 		273C84AA25AB5C5A00373A85 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -389,6 +413,7 @@
 		273C84AC25AB5C5A00373A85 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +431,7 @@
 		273C84AD25AB5C5A00373A85 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -451,6 +477,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		276B021425AB614800D67A7D /* XCRemoteSwiftPackageReference "elements" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/achimk/elements";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		276B021525AB614800D67A7D /* Elements */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 276B021425AB614800D67A7D /* XCRemoteSwiftPackageReference "elements" */;
+			productName = Elements;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 273C848B25AB5C5A00373A85 /* Project object */;
 }

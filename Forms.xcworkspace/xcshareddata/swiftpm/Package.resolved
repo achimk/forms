@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Elements",
+        "repositoryURL": "https://github.com/achimk/elements",
+        "state": {
+          "branch": "main",
+          "revision": "8b37102b3e36bb39813d132c17f17f6c6091ce19",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
